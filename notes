@@ -1,0 +1,28 @@
+# Nix is :
+
+		* purely functional ->
+				- no seq of steps
+				- eval nix expr returns a single data struct
+				- nix file eval to a single expr
+
+		* lazy ->
+				- eval expr only when it is req
+
+# data types :
+
+		* numbers
+				17
+				3.14
+
+		* strings & paths
+				"yooooooo"
+				./dir1/subdir2/filename		(no quotations used)
+
+		* lists
+				[ 1 1 2 3 5 8 13 ]    (no commas for sep)
+
+		* attribute sets
+				{ gamename = "sotc"; director = "fumito ueda"; }
+
+# operators :
+		
