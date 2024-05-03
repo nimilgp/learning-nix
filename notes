@@ -26,3 +26,24 @@
 
 # operators :
 		
+		* numeric op -> + - * /  (division is floor div)
+		* string cat -> +
+		* list cat -> ++
+		* compare -> the ussual
+		* logical implication e1 -> e2  (!e1 || e2)
+		
+		* merge op
+				{ day = "friday"; date = 3; month = "may"; } // { year = 2024; }
+		
+# builtins :
+		
+		* typeOf()
+		* isInt()   // isType()
+
+# functions :
+
+		lamda functions
+		* (x: x * x) 5 => 25
+		* (x: y: x - y) 3 5 => -2
+
+nix repl -> read-eval-print-loop
