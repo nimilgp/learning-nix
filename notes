@@ -78,4 +78,15 @@ nix repl -> read-eval-print-loop
         then "yup, it is the truth"
         else "lies"
 
+# inherit
+		let x = 123; in
+		{
+		inherit x;
+		y = 456;
+		}                   => {x = 123; y= 456;}
+
+# with
+		let attrs = { a = 15; b = 2; };
+		in with attrs; a + b   => 17
+
 
