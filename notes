@@ -1,3 +1,5 @@
+nix repl -> read-eval-print-loop
+
 # Nix is :
 
 		* purely functional ->
@@ -24,6 +26,7 @@
 		* attribute sets
 				{ gamename = "sotc"; director = "fumito ueda"; }
 
+
 # operators :
 		
 		* numeric op -> + - * /  (division is floor div)
@@ -48,11 +51,31 @@
 
 # functions (anon lambdas , ie treated like data) :
 
-		lamda functions
+		lambda functions
 		* (x: x * x) 5 => 25
 		* (x: y: x - y) 3 5 => -2
 		* (name: age: "${name} is ${toString age} years old") "nimil" 21
-		* funchello = (name: "hello ${name}"), funchello "nimil" => "hello nimil"
+		* funchello = (name: "hello ${name}"), funchello "nimil" => "hello nimil" 
+		* let                (the let in syntax)
+          mult = (a: b: a * b);
+          doubleit = (mult 2);
+          in
+          doubleit 8 => 16
+
+# multiple args (attr sets)
+		* ellipsis syntax
+		let 
+		func = { name, age, ...}: "${name} hello";         
+        person = { name = "nimil"; age = 20; email ="me@nimil.com";};
+        in 
+		func person
+		
+		* @ syntax
+		({a, b, ...}@args: args.b) {a = 5; b = 10; c = 15;} => 10
+
+# if then else
+		if 5 > 2
+        then "yup, it is the truth"
+        else "lies"
 
 
-nix repl -> read-eval-print-loop
