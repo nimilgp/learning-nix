@@ -34,16 +34,25 @@
 		
 		* merge op
 				{ day = "friday"; date = 3; month = "may"; } // { year = 2024; }
-		
+	
+# var binding (immutable) :
+		let 
+		a = 1;
+		b = 2;
+		in a + b   => 3
+
 # builtins :
 		
 		* typeOf()
 		* isInt()   // isType()
 
-# functions :
+# functions (anon lambdas , ie treated like data) :
 
 		lamda functions
 		* (x: x * x) 5 => 25
 		* (x: y: x - y) 3 5 => -2
+		* (name: age: "${name} is ${toString age} years old") "nimil" 21
+		* funchello = (name: "hello ${name}"), funchello "nimil" => "hello nimil"
+
 
 nix repl -> read-eval-print-loop
