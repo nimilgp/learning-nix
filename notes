@@ -1,3 +1,7 @@
+######################################################
+##IMPORTANT: read -> nix pills, nix reference manual##
+######################################################
+
 nix repl -> read-eval-print-loop  (for interactive practice)
 nix-instantiate --eval nixfilename (to eval a file)
 
